@@ -2,13 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link id="theme-favicon" rel="icon" href="%PUBLIC_URL%/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -24,7 +21,30 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Ghyciu</title>
+    <script>
+      (function () {
+        var lightHref = '%PUBLIC_URL%/logo.png';
+        var darkHref = '%PUBLIC_URL%/logo_dark.png';
+        var link = document.getElementById('theme-favicon');
+        if (!link) {
+          link = document.createElement('link');
+          link.id = 'theme-favicon';
+          link.rel = 'icon';
+          document.head.appendChild(link);
+        }
+        function update() {
+          var isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          link.href = isDark ? darkHref : lightHref;
+        }
+        update();
+        if (window.matchMedia) {
+          var mq = window.matchMedia('(prefers-color-scheme: dark)');
+          if (mq.addEventListener) mq.addEventListener('change', update);
+          else if (mq.addListener) mq.addListener(update);
+        }
+      })();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
