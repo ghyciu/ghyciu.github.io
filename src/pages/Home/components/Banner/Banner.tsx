@@ -1,7 +1,7 @@
 import React from 'react';
 import './Banner.css';
 
-import BannerBackground from '../../../../assets/images/banner_bg.png';
+import BannerBackground from '../../../../assets/images/banner_bg.jpg';
 
 import BannerCosplay from './Cosplay/BannerCosplay';
 

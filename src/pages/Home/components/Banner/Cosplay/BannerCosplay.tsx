@@ -7,8 +7,8 @@ const BannerCosplay: React.FC = () => {
   const animRef = useRef({ tx: 0, ty: 0, targetX: 0, targetY: 0, rafId: 0 });
 
   useEffect(() => {
-    const maxX = 40;
-    const maxY = 20;
+    const maxX = 20;
+    const maxY = 10;
 
     const handleMouseMove = (e: MouseEvent) => {
       const w = window.innerWidth || 1;
@@ -24,7 +24,7 @@ const BannerCosplay: React.FC = () => {
       s.tx += (s.targetX - s.tx) * 0.12;
       s.ty += (s.targetY - s.ty) * 0.12;
       if (containerRef.current) {
-        containerRef.current.style.transform = `translate(calc(-70% + ${s.tx}px), calc(50px + ${s.ty}px)) scale(0.85)`;
+        containerRef.current.style.transform = `translate(calc(-70% + ${s.tx}px), calc(20px + ${s.ty}px)) scale(0.9)`;
       }
       s.rafId = requestAnimationFrame(animate);
     };
