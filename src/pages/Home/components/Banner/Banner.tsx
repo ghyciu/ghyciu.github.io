@@ -1,9 +1,9 @@
 import React from 'react';
 import './Banner.css';
 
-import BannerBackground from '../../../../assets/images/banner_bg.jpg';
+import BannerBackground from './components/Background';
 
-import BannerCosplay from './Cosplay/BannerCosplay';
+import BannerCosplay from './components/Cosplay';
 
 interface BannerProps {
   children?: React.ReactNode;
@@ -12,7 +12,7 @@ interface BannerProps {
 const Banner: React.FC<BannerProps> = ({ children }) => {
   return (
     <div className={`banner`}>
-      <img className="banner-image" src={BannerBackground} alt="Banner" />
+      <BannerBackground />
       <div className="banner-overlay">
         <BannerCosplay />
       </div>

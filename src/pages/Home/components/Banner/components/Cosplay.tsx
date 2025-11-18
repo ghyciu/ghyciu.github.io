@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import BannerCosplayImage from '../../../../../assets/images/banner_cosplay.png';
-import './BannerCosplay.css';
 
 const BannerCosplay: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -13,8 +12,8 @@ const BannerCosplay: React.FC = () => {
     const handleMouseMove = (e: MouseEvent) => {
       const w = window.innerWidth || 1;
       const h = window.innerHeight || 1;
-      const nx = (e.clientX / w - 0.5) * 2; // -1 .. 1
-      const ny = (e.clientY / h - 0.5) * 2; // -1 .. 1
+      const nx = (e.clientX / w - 0.5) * 2;
+      const ny = (e.clientY / h - 0.5) * 2;
       animRef.current.targetX = nx * maxX;
       animRef.current.targetY = ny * maxY;
     };
