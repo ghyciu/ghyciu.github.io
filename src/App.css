@@ -10,3 +10,10 @@ body,
   max-width: 100%;
   overflow-x: hidden;
 }
+
+@font-face {
+  font-family: 'ChettaVissto-Regular';
+  src: url('./assets/fonts/ChettaVissto.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

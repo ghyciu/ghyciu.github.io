@@ -23,7 +23,7 @@ const BannerCosplay: React.FC = () => {
       s.tx += (s.targetX - s.tx) * 0.12;
       s.ty += (s.targetY - s.ty) * 0.12;
       if (containerRef.current) {
-        containerRef.current.style.transform = `translate(calc(-70% + ${s.tx}px), calc(20px + ${s.ty}px)) scale(0.9)`;
+        containerRef.current.style.transform = `translate(calc(-80% + ${s.tx}px), calc(20px + ${s.ty}px)) scale(1)`;
       }
       s.rafId = requestAnimationFrame(animate);
     };
