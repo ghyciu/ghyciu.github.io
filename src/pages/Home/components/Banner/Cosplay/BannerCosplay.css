@@ -1,0 +1,18 @@
+/* Anchors the cosplay banner centered at the bottom and scales it down 20% */
+.banner-cosplay {
+  position: absolute;
+  left: 70%;
+  bottom: -100;
+  transform: translateX(-70%) scale(0.7);
+  transform-origin: center bottom;
+  display: block;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.banner-cosplay__img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
