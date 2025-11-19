@@ -8,8 +8,9 @@ import MailIcon from '../../../../../assets/icons/sns_mail.png';
 const BannerContent: React.FC = () => {
   return (
     <div className="banner-content">
-      <h1>Ghyciu</h1>
-      <h2>Software Engineering, Graphic Design, Cosplay</h2>
+      <h2>SOFTWARE ENGINEERING</h2>
+      <h2>GRAPHIC DESIGN</h2>
+      <h2>COSPLAY</h2>
       <div className="banner-sns-icons">
         <a href="https://x.com/ghyciu" target="_blank" rel="noopener noreferrer">
           <img src={XIcon} alt="X" className="banner-sns-icon" />

@@ -50,10 +50,12 @@
   will-change: transform;
 }
 
+/* Banner Content */
+
 .banner-content {
   position: absolute;
-  left: 12%;
-  top: 50%;
+  left: 11%;
+  top: 57%;
   transform: translateY(-50%);
   z-index: 3;
   color: white;
@@ -61,16 +63,9 @@
   width: 600px;
 }
 
-.banner-content h1 {
-  font-size: 6rem;
-  font-family: 'ChettaVissto-Regular', serif;
-  margin: 0;
-}
-
 .banner-content h2 {
-  font-size: 1.5rem;
-  font-family: 'Garamond', serif;
-  font-weight: 300;
+  font-size: 1.8rem;
+  font-family: 'UAV-OSD-Mono-Regular', serif;
   margin: 0;
 }
 
@@ -80,9 +75,9 @@
 }
 
 .banner-sns-icon {
-  width: 20px;
-  height: 20px;
-  padding: 5px;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 10px;
   opacity: 0.8;
 }
 
@@ -90,7 +85,7 @@
   opacity: 1;
   cursor: pointer;
   transform: scale(1.2);
-  transition: ease-in 0.4s;
+  transition: ease-out 0.4s;
 }
 
 /* Banner Title */
@@ -99,6 +94,6 @@
   transform: translateX(-50%);
   z-index: 4;
   color: white;
-  font-size: 4.8rem;
+  font-size: 4.5rem;
   font-family: 'StretchPro-Regular', sans-serif;
 }
