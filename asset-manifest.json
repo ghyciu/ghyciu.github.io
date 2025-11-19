@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.69c60952.css",
-    "main.js": "/static/js/main.1b9c8d76.js",
+    "main.css": "/static/css/main.32872a1b.css",
+    "main.js": "/static/js/main.4259511b.js",
     "static/media/banner_bg.jpg": "/static/media/banner_bg.81badd50b5427f5a580f.jpg",
     "static/media/banner_cosplay.png": "/static/media/banner_cosplay.82f6cf0a4faa0e444628.png",
+    "static/media/StretchPro.otf": "/static/media/StretchPro.a2ac1b6e2a9086e61eb1.otf",
     "static/media/ChettaVissto.ttf": "/static/media/ChettaVissto.cd461d294a9c6939ee6b.ttf",
     "static/media/sns_instagram.png": "/static/media/sns_instagram.0c79032d30f9b6a858ec.png",
     "static/media/sns_x.png": "/static/media/sns_x.f28226ddaaf95f982de5.png",
     "static/media/sns_github.png": "/static/media/sns_github.2f69a361e05ca3c98d16.png",
+    "static/media/UAV-OSD-Mono.ttf": "/static/media/UAV-OSD-Mono.86d532bf5ef927b385cf.ttf",
     "static/media/sns_mail.png": "/static/media/sns_mail.3746f1b1b3a0f66efbd6.png",
     "index.html": "/index.html",
-    "main.69c60952.css.map": "/static/css/main.69c60952.css.map",
-    "main.1b9c8d76.js.map": "/static/js/main.1b9c8d76.js.map"
+    "main.32872a1b.css.map": "/static/css/main.32872a1b.css.map",
+    "main.4259511b.js.map": "/static/js/main.4259511b.js.map"
   },
   "entrypoints": [
-    "static/css/main.69c60952.css",
-    "static/js/main.1b9c8d76.js"
+    "static/css/main.32872a1b.css",
+    "static/js/main.4259511b.js"
   ]
 }
