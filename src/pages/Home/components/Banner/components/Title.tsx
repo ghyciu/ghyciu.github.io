@@ -7,18 +7,20 @@ const BannerTitle: React.FC = () => {
     const waitForTransition = (el: Element | null) =>
       new Promise<void>(resolve => {
         if (!el) return resolve();
+        let to: number | undefined;
         const handler = (e: Event) => {
           const te = e as TransitionEvent;
           if (te.propertyName && te.propertyName.includes('transform')) {
-            el.removeEventListener('TransitionEnd', handler);
+            el.removeEventListener('transitionend', handler);
+            if (to) clearTimeout(to);
             resolve();
           }
         };
-        el.addEventListener('TransitionEnd', handler);
+        el.addEventListener('transitionend', handler);
 
         // Fallback in case transitionend doesn't fire
-        const to = setTimeout(() => {
-          el.removeEventListener('TransitionEnd', handler);
+        to = window.setTimeout(() => {
+          el.removeEventListener('transitionend', handler);
           resolve();
         }, 1400);
       });
@@ -42,7 +44,14 @@ const BannerTitle: React.FC = () => {
       el.style.transition = 'transform 700ms cubic-bezier(.2,.9,.2,1)';
       el.style.transform = 'translate(-40%, -25%) scale(1)';
       await waitForTransition(el);
+
+      // Step 3: Notify BannerContent to start intro
       el.style.transition = '';
+      try {
+        window.dispatchEvent(new CustomEvent('bannerIntroComplete'));
+      } catch (err) {
+        window.dispatchEvent(new Event('bannerIntroComplete'));
+      }
     };
 
     runIntro();
