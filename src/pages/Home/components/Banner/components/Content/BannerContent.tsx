@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
 import BannerContentLink from './BannerContentLink';
+import BannerContentSocial from './BannerContentSocial';
 
 import XIcon from '../../../../../../assets/icons/sns_x.png';
 import GithubIcon from '../../../../../../assets/icons/sns_github.png';
@@ -47,18 +48,10 @@ const BannerContent: React.FC = () => {
       <BannerContentLink label="Graphic Design" href="/blank" />
       <BannerContentLink label="Cosplay" href="/blank" />
       <div className="banner-sns-icons">
-        <a href="https://x.com/ghyciu" target="_blank" rel="noopener noreferrer">
-          <img src={XIcon} alt="X" className="banner-sns-icon" />
-        </a>
-        <a href="https://instagram.com/ghyciu" target="_blank" rel="noopener noreferrer">
-          <img src={InstagramIcon} alt="Instagram" className="banner-sns-icon" />
-        </a>
-        <a href="https://github.com/ghyciu" target="_blank" rel="noopener noreferrer">
-          <img src={GithubIcon} alt="GitHub" className="banner-sns-icon" />
-        </a>
-        <a href="mailto:contact@ghyciu.com">
-          <img src={MailIcon} alt="Mail" className="banner-sns-icon" />
-        </a>
+        <BannerContentSocial icon={XIcon} href="https://x.com/ghyciu" alt="X" />
+        <BannerContentSocial icon={InstagramIcon} href="https://instagram.com/ghyciu" alt="Instagram" />
+        <BannerContentSocial icon={GithubIcon} href="https://github.com/ghyciu" alt="GitHub" />
+        <BannerContentSocial icon={MailIcon} href="mailto:contact@ghyciu.com" alt="Mail" />
       </div>
     </div>
   );
