@@ -31,18 +31,18 @@ const BannerTitle: React.FC = () => {
       el.style.transition = '';
 
       // Step 0: Set initial position of element
-      el.style.transform = 'translate(0%, -120%) scale(1)';
+      el.style.transform = 'translate(50%, -220%) scale(1)';
       // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       el.offsetHeight;
 
       // Step 1: Set vertical position (move down)
       el.style.transition = 'transform 900ms cubic-bezier(.2,.9,.2,1)';
-      el.style.transform = 'translate(0%, -25%) scale(1)';
+      el.style.transform = 'translate(50%, -80%) scale(1)';
       await waitForTransition(el);
 
       // Step 2: Set horizontal position (move left)
       el.style.transition = 'transform 700ms cubic-bezier(.2,.9,.2,1)';
-      el.style.transform = 'translate(-40%, -25%) scale(1)';
+      el.style.transform = 'translate(0%, -80%) scale(1)';
       await waitForTransition(el);
 
       // Step 3: Notify BannerContent to start intro
