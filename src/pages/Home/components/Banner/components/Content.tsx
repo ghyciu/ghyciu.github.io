@@ -41,9 +41,24 @@ const BannerContent: React.FC = () => {
 
   return (
     <div ref={containerRef} className="banner-content">
-      <h2>SOFTWARE ENGINEERING</h2>
-      <h2>GRAPHIC DESIGN</h2>
-      <h2>COSPLAY</h2>
+      <a href="/blank" className="banner-link">
+        <div className="banner-link-inner">
+          <h2>SOFTWARE ENGINEERING</h2>
+        </div>
+      </a>
+
+      <a href="/blank" className="banner-link">
+        <div className="banner-link-inner">
+          <h2>GRAPHIC DESIGN</h2>
+        </div>
+      </a>
+
+      <a href="/blank" className="banner-link">
+        <div className="banner-link-inner">
+          <h2>COSPLAY</h2>
+        </div>
+      </a>
+
       <div className="banner-sns-icons">
         <a href="https://x.com/ghyciu" target="_blank" rel="noopener noreferrer">
           <img src={XIcon} alt="X" className="banner-sns-icon" />
