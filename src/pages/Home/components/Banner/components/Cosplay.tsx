@@ -58,12 +58,12 @@ const BannerCosplay: React.FC = () => {
       // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       el.offsetHeight;
 
-      // Step 1: Set vertical position
+      // Step 1: Set vertical position (move up)
       el.style.transition = 'transform 900ms cubic-bezier(.2,.9,.2,1)';
       el.style.transform = 'translate(-120%, calc(20px)) scale(1)';
       await waitForTransition(el);
 
-      // Step 2: Set horizontal position
+      // Step 2: Set horizontal position (move right)
       el.style.transition = 'transform 700ms cubic-bezier(.2,.9,.2,1)';
       el.style.transform = 'translate(calc(-70%), 20px) scale(1)';
       await waitForTransition(el);

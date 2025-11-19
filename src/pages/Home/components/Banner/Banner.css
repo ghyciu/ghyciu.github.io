@@ -35,7 +35,7 @@
   bottom: 0;
   transform-origin: center bottom;
   display: block;
-  z-index: 2;
+  z-index: 6;
   pointer-events: none;
 }
 
@@ -91,4 +91,14 @@
   cursor: pointer;
   transform: scale(1.2);
   transition: ease-in 0.4s;
+}
+
+/* Banner Title */
+.banner-title {
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 4;
+  color: white;
+  font-size: 4.8rem;
+  font-family: 'StretchPro-Regular', sans-serif;
 }
