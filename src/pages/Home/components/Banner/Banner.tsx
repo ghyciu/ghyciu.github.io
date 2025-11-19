@@ -1,11 +1,11 @@
 import React from 'react';
 import './Banner.css';
 
-import BannerBackground from './components/Background';
+import BannerBackground from './components/BannerBackground';
 
-import BannerCosplay from './components/Cosplay';
-import BannerTitle from './components/Title';
-import BannerContent from './components/Content';
+import BannerCosplay from './components/BannerCosplay';
+import BannerTitle from './components/BannerTitle';
+import BannerContent from './components/Content/BannerContent';
 
 interface BannerProps {
   children?: React.ReactNode;

@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 
-import XIcon from '../../../../../assets/icons/sns_x.png';
-import GithubIcon from '../../../../../assets/icons/sns_github.png';
-import InstagramIcon from '../../../../../assets/icons/sns_instagram.png';
-import MailIcon from '../../../../../assets/icons/sns_mail.png';
+import BannerContentLink from './BannerContentLink';
+
+import XIcon from '../../../../../../assets/icons/sns_x.png';
+import GithubIcon from '../../../../../../assets/icons/sns_github.png';
+import InstagramIcon from '../../../../../../assets/icons/sns_instagram.png';
+import MailIcon from '../../../../../../assets/icons/sns_mail.png';
 
 const BannerContent: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -41,24 +43,9 @@ const BannerContent: React.FC = () => {
 
   return (
     <div ref={containerRef} className="banner-content">
-      <a href="/blank" className="banner-link">
-        <div className="banner-link-inner">
-          <h2>SOFTWARE ENGINEERING</h2>
-        </div>
-      </a>
-
-      <a href="/blank" className="banner-link">
-        <div className="banner-link-inner">
-          <h2>GRAPHIC DESIGN</h2>
-        </div>
-      </a>
-
-      <a href="/blank" className="banner-link">
-        <div className="banner-link-inner">
-          <h2>COSPLAY</h2>
-        </div>
-      </a>
-
+      <BannerContentLink label="Software Engineering" href="/blank" />
+      <BannerContentLink label="Graphic Design" href="/blank" />
+      <BannerContentLink label="Cosplay" href="/blank" />
       <div className="banner-sns-icons">
         <a href="https://x.com/ghyciu" target="_blank" rel="noopener noreferrer">
           <img src={XIcon} alt="X" className="banner-sns-icon" />
