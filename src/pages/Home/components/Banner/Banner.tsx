@@ -15,7 +15,7 @@ const Banner: React.FC<BannerProps> = ({ children }) => {
     <div className={`banner`}>
       <BannerBackground />
       <div className="banner-overlay">
-        <BannerContent />
+        {/*<BannerContent />*/}
         <BannerCosplay />
       </div>
     </div>
