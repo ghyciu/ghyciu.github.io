@@ -3,6 +3,7 @@ import './Banner.css';
 
 import BannerBackground from './components/BannerBackground';
 
+import BannerHeader from './components/BannerHeader';
 import BannerCosplay from './components/BannerCosplay';
 import BannerTitle from './components/BannerTitle';
 import BannerContent from './components/Content/BannerContent';
@@ -16,6 +17,7 @@ const Banner: React.FC<BannerProps> = ({ children }) => {
     <div className={`banner`}>
       <BannerBackground />
       <div className="banner-overlay">
+        <BannerHeader />
         <BannerTitle />
         <BannerCosplay />
         <BannerContent />
