@@ -17,3 +17,17 @@ body,
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'StretchPro-Regular';
+  src: url('./assets/fonts/StretchPro.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UAV-OSD-Mono-Regular';
+  src: url('./assets/fonts/UAV-OSD-Mono.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

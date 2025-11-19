@@ -15,7 +15,7 @@
   object-fit: cover;
   object-position: center;
   display: block;
-  filter: blur(5px) brightness(0.8);
+  filter: blur(2px) contrast(0.8) brightness(0.9);
 }
 
 .banner-overlay {
@@ -35,7 +35,7 @@
   bottom: 0;
   transform-origin: center bottom;
   display: block;
-  z-index: 2;
+  z-index: 6;
   pointer-events: none;
 }
 
@@ -50,10 +50,12 @@
   will-change: transform;
 }
 
+/* Banner Content */
+
 .banner-content {
   position: absolute;
-  left: 12%;
-  top: 50%;
+  left: 11%;
+  top: 55%;
   transform: translateY(-50%);
   z-index: 3;
   color: white;
@@ -61,18 +63,36 @@
   width: 600px;
 }
 
-.banner-content h1 {
-  font-size: 6rem;
-  font-family: 'ChettaVissto-Regular', serif;
-  margin: 0;
+/* Banner Content - Links */
+
+a.banner-content-link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  transition: color 280ms ease;
 }
 
-.banner-content h2 {
-  font-size: 1.5rem;
-  font-family: 'Garamond', serif;
-  font-weight: 300;
-  margin: 0;
+a.banner-content-link:visited {
+  color: inherit;
 }
+
+.banner-content-link-inner {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.banner-content-link-inner h2 {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-family: 'UAV-OSD-Mono-Regular', serif;
+  margin: 0;
+  transition: color 280ms ease;
+}
+
+/* Banner Content - Socials */
 
 .banner-sns-icons {
   margin-top: 10px;
@@ -80,9 +100,9 @@
 }
 
 .banner-sns-icon {
-  width: 20px;
-  height: 20px;
-  padding: 5px;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 10px;
   opacity: 0.8;
 }
 
@@ -90,5 +110,62 @@
   opacity: 1;
   cursor: pointer;
   transform: scale(1.2);
-  transition: ease-in 0.4s;
+  transition: ease-out 0.4s;
+}
+
+/* Banner Title */
+
+.banner-title {
+  position: absolute;
+  left: 11%;
+  top: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  color: white;
+  font-size: 4.5rem;
+  font-family: 'StretchPro-Regular', sans-serif;
+  pointer-events: none;
+}
+
+/* Banner Header */
+.banner-header {
+  position: absolute;
+  top: 5%;
+  left: 11%;
+  height: 15px;
+  z-index: 5;
+  padding: 10px 50px;
+  border: 3px solid white;
+  overflow-x: hidden;
+}
+
+/* Banner Header - Nav */
+.banner-nav {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  height: 100%;
+}
+
+.banner-nav-item {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.banner-nav-link {
+  color: white;
+  font-family: 'UAV-OSD-Mono-Regular', monospace;
+  text-decoration: none;
+  transition: color 200ms ease, opacity 200ms ease;
+}
+
+.banner-nav-link:visited {
+  color: white;
+}
+
+.banner-nav-link:hover,
+.banner-nav-link:focus {
+  color: #ddd;
+  outline: none;
 }
