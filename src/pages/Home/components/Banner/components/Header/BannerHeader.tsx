@@ -1,10 +1,12 @@
+import BannerHeaderLogo from './BannerHeaderLogo';
 import BannerHeaderLink from './BannerHeaderLink';
 
 const BannerHeader: React.FC = () => {
   return (
     <div className="banner-header">
+      <BannerHeaderLogo />
       <nav className="banner-nav">
-        <BannerHeaderLink label="Welcome" href="/welcome" />
+        <BannerHeaderLink label="Welcome" href="/welcome" selected />
         <BannerHeaderLink label="Projects" href="/projects" />
         <BannerHeaderLink label="Design" href="/design" />
         <BannerHeaderLink label="Cosplay" href="/cosplay" />

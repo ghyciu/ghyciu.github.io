@@ -3,6 +3,7 @@ import { useState, useCallback } from 'react';
 interface BannerHeaderLinkProps {
   label: string;
   href: string;
+  selected?: boolean | false;
 }
 
 const BannerHeaderLink = (props: BannerHeaderLinkProps) => {
@@ -15,11 +16,11 @@ const BannerHeaderLink = (props: BannerHeaderLinkProps) => {
   return (
     <h2 className="banner-nav-item">
       <a
-        href={props.href}
-        className="banner-nav-link"
+        href={!props.selected ? props.href : undefined}
+        className={props.selected ? 'banner-nav-link selected' : 'banner-nav-link'}
         onMouseEnter={() => setHoverColor(generateHSL(randomHue()))}
         onMouseLeave={() => setHoverColor(null)}
-        style={hoverColor ? { color: hoverColor } : undefined}
+        style={!props.selected && hoverColor ? { color: hoverColor } : undefined}
       >
         {label}
       </a>
