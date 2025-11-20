@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
 import BannerContentLink from './BannerContentLink';
+import BannerContentCards from './BannerContentCards';
 import BannerContentSocial from './BannerContentSocial';
 
 import XIcon from '../../../../../../assets/icons/sns_x.png';
@@ -47,6 +48,7 @@ const BannerContent: React.FC = () => {
       <BannerContentLink label="Software Engineering" href="/blank" />
       <BannerContentLink label="Graphic Design" href="/blank" />
       <BannerContentLink label="Cosplay" href="/blank" />
+      <BannerContentCards />
       <div className="banner-sns-icons">
         <BannerContentSocial icon={XIcon} href="https://x.com/ghyciu" alt="X" />
         <BannerContentSocial icon={InstagramIcon} href="https://instagram.com/ghyciu" alt="Instagram" />
