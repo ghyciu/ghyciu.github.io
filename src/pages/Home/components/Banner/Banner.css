@@ -161,11 +161,5 @@ a.banner-content-link:visited {
 }
 
 .banner-nav-link:visited {
-  color: white;
-}
-
-.banner-nav-link:hover,
-.banner-nav-link:focus {
-  color: #ddd;
-  outline: none;
+  color: inherit;
 }
