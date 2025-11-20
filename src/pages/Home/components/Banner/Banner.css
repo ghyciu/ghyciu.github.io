@@ -185,11 +185,52 @@ a.banner-content-link:visited {
   display: inline-block;
 }
 
+/* Banner Header - Banner - Logo */
+
 .banner-logo {
+  display: inline-flex;
+  align-items: center;
   margin-right: 100px;
 }
 
 .banner-logo img {
   height: 30px;
   width: 30px;
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform 220ms ease;
+}
+
+.banner-logo:hover img {
+  animation: banner-logo-rotate-steps 4s linear infinite;
+}
+
+@keyframes banner-logo-rotate-steps {
+  0% {
+    transform: rotate(0deg);
+  }
+  18% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  43% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  68% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  93% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
