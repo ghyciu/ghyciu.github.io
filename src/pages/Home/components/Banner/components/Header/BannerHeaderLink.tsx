@@ -22,7 +22,7 @@ const BannerHeaderLink = (props: BannerHeaderLinkProps) => {
         onMouseLeave={() => setHoverColor(null)}
         style={!props.selected && hoverColor ? { color: hoverColor } : undefined}
       >
-        {label}
+        <span className="banner-nav-label">{label}</span>
       </a>
     </h2>
   );
