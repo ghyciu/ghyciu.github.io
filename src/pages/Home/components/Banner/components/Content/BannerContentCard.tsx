@@ -5,6 +5,7 @@ interface BannerContentCardProps {
   title: string;
   subtitle?: string | '';
   framework?: string | '';
+  href?: string | '';
 }
 
 const BannerContentCard = (props: BannerContentCardProps) => {
@@ -47,6 +48,12 @@ const BannerContentCard = (props: BannerContentCardProps) => {
     setShinePosition({ x: 50, y: 50 });
   };
 
+  const handleClick = () => {
+    if (props.href) {
+      window.open(props.href, '_blank');
+    }
+  };
+
   return (
     <div
       className="banner-content-card"
@@ -60,6 +67,7 @@ const BannerContentCard = (props: BannerContentCardProps) => {
         transform: `perspective(1000px) rotateX(${rotation.rotateX}deg) rotateY(${rotation.rotateY}deg)`,
         transition: follower.visible ? 'none' : 'transform 0.3s ease-out'
       }}
+      onClick={handleClick}
     >
       {follower.visible && (
         <div
