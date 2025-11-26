@@ -14,23 +14,38 @@ const BannerContentCard = (props: BannerContentCardProps) => {
     x: 0,
     y: 0
   });
+  const [rotation, setRotation] = useState({ rotateX: 0, rotateY: 0 });
+  const [shinePosition, setShinePosition] = useState({ x: 50, y: 50 });
 
   const handlePointerMove = (e: React.PointerEvent) => {
     if (!cardRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
     const rawX = e.clientX - rect.left;
     const rawY = e.clientY - rect.top;
-    const size = 96; // follower size in px
+    const size = 96;
 
-    // clamp so the follower image stays fully inside the card
     const half = size / 2;
     const x = Math.min(Math.max(rawX, half), rect.width - half);
     const y = Math.min(Math.max(rawY, half), rect.height - half);
     setFollower({ visible: true, x, y });
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateY = ((rawX - centerX) / centerX) * 15; // max 15 degrees
+    const rotateX = ((centerY - rawY) / centerY) * 15; // max 15 degrees
+    setRotation({ rotateX, rotateY });
+
+    const shineX = (rawX / rect.width) * 100;
+    const shineY = (rawY / rect.height) * 100;
+    setShinePosition({ x: shineX, y: shineY });
   };
 
   const handlePointerEnter = () => setFollower(f => ({ ...f, visible: true }));
-  const handlePointerLeave = () => setFollower({ visible: false, x: 0, y: 0 });
+  const handlePointerLeave = () => {
+    setFollower({ visible: false, x: 0, y: 0 });
+    setRotation({ rotateX: 0, rotateY: 0 });
+    setShinePosition({ x: 50, y: 50 });
+  };
 
   return (
     <div
@@ -39,8 +54,22 @@ const BannerContentCard = (props: BannerContentCardProps) => {
       onPointerMove={handlePointerMove}
       onPointerEnter={handlePointerEnter}
       onPointerLeave={handlePointerLeave}
-      style={{ position: 'relative', overflow: 'hidden' }}
+      style={{
+        position: 'relative',
+        overflow: 'hidden',
+        transform: `perspective(1000px) rotateX(${rotation.rotateX}deg) rotateY(${rotation.rotateY}deg)`,
+        transition: follower.visible ? 'none' : 'transform 0.3s ease-out'
+      }}
     >
+      {follower.visible && (
+        <div
+          className="banner-content-card-shine"
+          style={{
+            background: `radial-gradient(circle at ${shinePosition.x}% ${shinePosition.y}%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.2) 30%, transparent 60%)`
+          }}
+        />
+      )}
+
       <img src={props.icon} alt={`${props.title} logo`} />
       <h2>{props.title}</h2>
       <h3>{props.subtitle}</h3>

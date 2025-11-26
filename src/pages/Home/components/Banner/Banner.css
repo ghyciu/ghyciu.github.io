@@ -116,16 +116,29 @@ a.banner-content-link:visited {
   align-items: flex-start;
   justify-content: flex-start;
   cursor: pointer;
-  transition: transform 280ms ease, background-color 280ms ease;
+  transition: background-color 280ms ease;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   padding: 15px;
   margin-top: 2rem;
+  transform-style: preserve-3d;
 }
 
 .banner-content-card:hover {
-  transform: scale(1.05);
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.banner-content-card-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  border-radius: 8px;
+  opacity: 0.6;
+  mix-blend-mode: overlay;
+  z-index: 10;
 }
 
 .banner-content-card img {
@@ -133,6 +146,7 @@ a.banner-content-link:visited {
   height: 40px;
   margin-bottom: 20px;
   border-radius: 50%;
+  background-color: rgb(255, 255, 255, 0.2);
 }
 
 .banner-content-card h2 {
