@@ -1,7 +1,7 @@
 .footer {
   font-family: 'Poppins', monospace;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -15,6 +15,9 @@
 .footer-right {
   width: 29%;
   text-align: right;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .footer-left a {

@@ -2,12 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 import BannerContentLink from './BannerContentLink';
 import BannerContentCards from './BannerContentCards';
-import BannerContentSocial from './BannerContentSocial';
-
-import XIcon from '../../../../../../assets/icons/sns_x.png';
-import GithubIcon from '../../../../../../assets/icons/sns_github.png';
-import InstagramIcon from '../../../../../../assets/icons/sns_instagram.png';
-import MailIcon from '../../../../../../assets/icons/sns_mail.png';
+import Socials from '../../../../../../components/Socials/Socials';
 
 const BannerContent: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -49,12 +44,7 @@ const BannerContent: React.FC = () => {
       <BannerContentLink label="Graphic Design" href="/blank" />
       <BannerContentLink label="Cosplay" href="/blank" />
       <BannerContentCards />
-      <div className="banner-sns-icons">
-        <BannerContentSocial icon={XIcon} href="https://x.com/ghyciu" alt="X" />
-        <BannerContentSocial icon={InstagramIcon} href="https://instagram.com/ghyciu" alt="Instagram" />
-        <BannerContentSocial icon={GithubIcon} href="https://github.com/ghyciu" alt="GitHub" />
-        <BannerContentSocial icon={MailIcon} href="mailto:contact@ghyciu.com" alt="Mail" />
-      </div>
+      <Socials />
     </div>
   );
 };

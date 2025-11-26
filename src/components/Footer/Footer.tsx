@@ -1,4 +1,5 @@
 import './Footer.css';
+import Socials from '../Socials/Socials';
 
 const Footer = () => {
   return (
@@ -13,7 +14,9 @@ const Footer = () => {
         <a href="https://ghyciu.com">ghyciu.com</a>
         <p>© 2025 Ghyciu. All rights reserved.</p>
       </div>
-      <div className="footer-right">example</div>
+      <div className="footer-right">
+        <Socials />
+      </div>
     </div>
   );
 };
