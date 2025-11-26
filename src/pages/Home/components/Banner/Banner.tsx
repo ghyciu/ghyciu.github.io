@@ -3,7 +3,7 @@ import './Banner.css';
 
 import BannerBackground from './components/BannerBackground';
 
-import BannerHeader from './components/BannerHeader';
+import BannerHeader from './components/Header/BannerHeader';
 import BannerCosplay from './components/BannerCosplay';
 import BannerTitle from './components/BannerTitle';
 import BannerContent from './components/Content/BannerContent';
