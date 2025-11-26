@@ -37,7 +37,7 @@ const CosplayCard = ({ image, title, date }: CosplayCardProps) => {
       <div className="home-cosplay-card-img-wrapper">
         <img src={image} alt={title} />
         <div className="home-cosplay-card-blur-bottom">
-          <div className="home-cosplay-card-blur-color" style={{ background: blurColor }} />
+          <div className="home-cosplay-card-blur-color" style={{ background: blurColor }}></div>
         </div>
       </div>
     </div>
