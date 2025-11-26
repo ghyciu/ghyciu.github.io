@@ -1,0 +1,33 @@
+.footer {
+  font-family: 'Poppins', monospace;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(135deg, #08080a 0%, #171723 60%, #1a1a29 100%);
+}
+
+.footer-left {
+  width: 29%;
+}
+
+.footer-right {
+  width: 29%;
+  text-align: right;
+}
+
+.footer-left a {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--accent-color-2);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-left p {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #cccccc;
+  margin: 0;
+}
