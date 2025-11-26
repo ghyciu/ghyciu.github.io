@@ -23,6 +23,35 @@
   color: #fefefe;
 }
 
+.about-header {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.about-header.fade-in {
+  opacity: 1;
+  animation: fadeIn 0.7s ease;
+}
+
+.about-description {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.about-description.fade-in {
+  opacity: 1;
+  animation: fadeIn 0.7s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .about-container p {
   font-size: 1rem;
   line-height: 1.7;
