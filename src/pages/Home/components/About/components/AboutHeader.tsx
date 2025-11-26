@@ -28,7 +28,7 @@ const AboutHeader: React.FC<AboutHeaderProps> = ({ title }) => {
   }, []);
 
   return (
-    <div ref={headerRef} className={`about-header${visible ? ' fade-in' : ''}`}>
+    <div ref={headerRef} className={`about-header${visible ? ' float-in-up' : ''}`}>
       <h2>{title}</h2>
     </div>
   );

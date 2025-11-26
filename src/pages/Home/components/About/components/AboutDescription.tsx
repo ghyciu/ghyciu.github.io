@@ -1,5 +1,4 @@
-
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 
 const AboutDescription: React.FC = () => {
   const [visible, setVisible] = useState(false);
@@ -7,7 +6,7 @@ const AboutDescription: React.FC = () => {
 
   useEffect(() => {
     const observer = new window.IntersectionObserver(
-      (entries) => {
+      entries => {
         const entry = entries[0];
         if (entry && entry.isIntersecting) {
           setVisible(true);
@@ -25,7 +24,7 @@ const AboutDescription: React.FC = () => {
   }, []);
 
   return (
-    <div ref={descRef} className={`about-description${visible ? " fade-in" : ""}`}>
+    <div ref={descRef} className={`about-description${visible ? ' float-in-up' : ''}`}>
       <p>
         I'm a software engineer based in Manila, Philippines with experience in building web and mobile applications using modern technologies. I'm passionate about creating efficient and
         user-friendly software solutions for clients across various industries.
