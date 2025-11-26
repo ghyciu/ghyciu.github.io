@@ -1,0 +1,31 @@
+.about {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.about-container {
+  max-width: 700px;
+  text-align: justify;
+  text-align-last: left;
+  font-family: 'Poppins', monospace;
+}
+
+.about-container h2 {
+  font-size: 2rem;
+  text-align: center;
+  text-align-last: center;
+  font-family: 'Poppins', monospace;
+  font-weight: 600;
+  color: #fefefe;
+}
+
+.about-container p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #cccccc;
+  font-weight: 400;
+}
