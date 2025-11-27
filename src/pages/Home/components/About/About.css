@@ -1,0 +1,23 @@
+.about {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+}
+
+.about-container {
+  max-width: 700px;
+  text-align: justify;
+  text-align-last: left;
+  font-family: 'Poppins', monospace;
+}
+
+.about-container .title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}

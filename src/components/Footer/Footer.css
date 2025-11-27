@@ -1,0 +1,69 @@
+.footer {
+  font-family: 'Poppins', monospace;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(135deg, #08080a 0%, #171723 60%, #1a1a29 100%);
+  gap: 50px;
+  width: 100%;
+}
+
+.footer-left {
+  margin-left: 10%;
+  width: 20%;
+}
+
+.footer-right {
+  margin-right: 10%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-logo {
+  font-family: 'StretchPro-Regular', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.footer-left a {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--accent-color-2);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-left a:hover {
+  text-decoration: underline;
+}
+
+.footer-left p {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #cccccc;
+  margin: 0;
+}
+
+.footer-right h2 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent-color-2);
+  margin-bottom: 1rem;
+}
+
+.footer-right a {
+  text-decoration: none;
+  color: #cccccc;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+  color: var(--accent-color-2);
+}

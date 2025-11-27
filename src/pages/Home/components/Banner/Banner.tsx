@@ -14,7 +14,7 @@ interface BannerProps {
 
 const Banner: React.FC<BannerProps> = ({ children }) => {
   return (
-    <div className={`banner`}>
+    <div className="banner">
       <BannerBackground />
       <div className="banner-overlay">
         <BannerHeader />

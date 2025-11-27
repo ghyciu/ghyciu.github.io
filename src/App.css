@@ -2,6 +2,7 @@ html,
 body,
 #root {
   overflow-x: hidden;
+  background: linear-gradient(135deg, #0a2340 0%, #1a3350 60%, #2a4470 100%);
 }
 
 .App {
@@ -33,5 +34,6 @@ body,
 }
 
 :root {
-  --accent-color: #9900ff;
+  --accent-color: #4271ff;
+  --accent-color-2: #55ccff;
 }
