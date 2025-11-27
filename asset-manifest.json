@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.949eaacd.css",
-    "main.js": "/static/js/main.2b0919a4.js",
+    "main.css": "/static/css/main.a11ad386.css",
+    "main.js": "/static/js/main.be20e2c4.js",
     "static/media/banner_bg.jpg": "/static/media/banner_bg.81badd50b5427f5a580f.jpg",
     "static/media/banner_cosplay.png": "/static/media/banner_cosplay.82f6cf0a4faa0e444628.png",
     "static/media/banner_card_echo.png": "/static/media/banner_card_echo.67bace61e991a0df24b7.png",
     "static/media/StretchPro.otf": "/static/media/StretchPro.a2ac1b6e2a9086e61eb1.otf",
+    "static/media/cos_march7th.jpg": "/static/media/cos_march7th.a8bcd6166f1c0fda73f9.jpg",
     "static/media/ChettaVissto.ttf": "/static/media/ChettaVissto.cd461d294a9c6939ee6b.ttf",
     "static/media/sns_instagram.png": "/static/media/sns_instagram.0c79032d30f9b6a858ec.png",
     "static/media/sns_x.png": "/static/media/sns_x.f28226ddaaf95f982de5.png",
@@ -14,11 +15,11 @@
     "static/media/UAV-OSD-Mono.ttf": "/static/media/UAV-OSD-Mono.86d532bf5ef927b385cf.ttf",
     "static/media/sns_mail.png": "/static/media/sns_mail.3746f1b1b3a0f66efbd6.png",
     "index.html": "/index.html",
-    "main.949eaacd.css.map": "/static/css/main.949eaacd.css.map",
-    "main.2b0919a4.js.map": "/static/js/main.2b0919a4.js.map"
+    "main.a11ad386.css.map": "/static/css/main.a11ad386.css.map",
+    "main.be20e2c4.js.map": "/static/js/main.be20e2c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.949eaacd.css",
-    "static/js/main.2b0919a4.js"
+    "static/css/main.a11ad386.css",
+    "static/js/main.be20e2c4.js"
   ]
 }
