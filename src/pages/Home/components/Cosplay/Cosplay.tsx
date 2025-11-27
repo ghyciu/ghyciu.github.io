@@ -1,14 +1,16 @@
 import './Cosplay.css';
-import CosplayTitle from './components/CosplayTitle';
+import Title from '../../../../components/Title/Title';
 import CosplayBlurb from './components/CosplayBlurb';
 import CosplayCards from './components/CosplayCards';
+import CosplayMore from './components/CosplayMore';
 
 const Cosplay = () => {
   return (
     <div className="home-cosplay">
-      <CosplayTitle />
+      <Title>Cosplay</Title>
       <CosplayBlurb />
       <CosplayCards />
+      <CosplayMore />
     </div>
   );
 };

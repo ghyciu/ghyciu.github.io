@@ -1,6 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
+import './Title.css';
 
-const CosplayTitle = () => {
+interface TitleProps {
+  children?: React.ReactNode;
+}
+
+const Title = ({ children }: TitleProps) => {
   const [visible, setVisible] = useState(false);
   const titleRef = useRef<HTMLDivElement>(null);
 
@@ -24,10 +29,10 @@ const CosplayTitle = () => {
   }, []);
 
   return (
-    <div ref={titleRef} className={`home-cosplay-title${visible ? ' float-in-up' : ''}`}>
-      Cosplay
+    <div ref={titleRef} className={`title${visible ? ' float-in-up' : ''}`}>
+      {children}
     </div>
   );
 };
 
-export default CosplayTitle;
+export default Title;
