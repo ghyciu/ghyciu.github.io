@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './Title.css';
+import './Description.css';
 
-interface TitleProps {
+interface DescriptionProps {
   children?: React.ReactNode;
 }
 
-const Title: React.FC<TitleProps> = ({ children }) => {
+const Description: React.FC<DescriptionProps> = ({ children }) => {
   const [visible, setVisible] = useState(false);
-  const titleRef = useRef<HTMLDivElement>(null);
+  const descRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new window.IntersectionObserver(
@@ -20,8 +20,8 @@ const Title: React.FC<TitleProps> = ({ children }) => {
       },
       { threshold: 0.1 }
     );
-    if (titleRef.current) {
-      observer.observe(titleRef.current);
+    if (descRef.current) {
+      observer.observe(descRef.current);
     }
     return () => {
       observer.disconnect();
@@ -29,10 +29,10 @@ const Title: React.FC<TitleProps> = ({ children }) => {
   }, []);
 
   return (
-    <div ref={titleRef} className={`title${visible ? ' float-in-up' : ''}`}>
+    <div ref={descRef} className={`description${visible ? ' float-in-up' : ''}`}>
       {children}
     </div>
   );
 };
 
-export default Title;
+export default Description;

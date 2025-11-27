@@ -15,63 +15,9 @@
   font-family: 'Poppins', monospace;
 }
 
-.about-container h2 {
-  font-size: 2.3rem;
+.about-container .title {
+  display: flex;
+  justify-content: center;
   text-align: center;
-  text-align-last: center;
-  font-family: 'Poppins', monospace;
-  font-weight: 600;
-  color: #fefefe;
-}
-
-.about-header {
-  opacity: 0;
-  transition: opacity 0.7s ease;
-}
-
-.about-header.fade-in {
-  opacity: 1;
-  animation: fadeIn 0.7s ease;
-}
-
-.about-header h2 {
-  font-family: 'StretchPro-Regular', sans-serif;
-  text-transform: uppercase;
-}
-
-.about-description {
-  opacity: 0;
-  transition: opacity 0.7s ease;
-}
-
-.about-description.fade-in {
-  opacity: 1;
-  animation: fadeIn 0.7s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.about-container p {
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: #cccccc;
-  font-weight: 400;
-}
-
-.about-description.float-in-up {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.about-description {
-  opacity: 0;
-  transform: translateY(40px);
+  width: 100%;
 }
