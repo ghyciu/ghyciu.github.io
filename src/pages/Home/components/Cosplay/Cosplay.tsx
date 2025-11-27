@@ -2,6 +2,7 @@ import './Cosplay.css';
 
 import Title from '../../../../components/Title/Title';
 import Description from '../../../../components/Description/Description';
+import SectionLink from '../../../../components/SectionLink/SectionLink';
 
 import CosplayCards from './components/CosplayCards';
 import CosplayMore from './components/CosplayMore';
@@ -17,7 +18,7 @@ const Cosplay = () => {
         </p>
       </Description>
       <CosplayCards />
-      <CosplayMore />
+      <SectionLink label="Read more about my cosplays" href="/cosplay" />
     </div>
   );
 };
