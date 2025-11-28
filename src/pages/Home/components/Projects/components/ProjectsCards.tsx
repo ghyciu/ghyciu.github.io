@@ -25,7 +25,7 @@ const ProjectsCards = () => {
     {
       images: [Chime1, Chime2, Chime3, Chime4],
       title: 'Chime',
-      framework: 'Flutter, Dart, Google Cloud',
+      framework: 'Flutter, Dart, GCP',
       description: 'Marketing and Business App for Philippine MSMEs',
       href: 'https://github.com/ghyciu/Chime'
     },
