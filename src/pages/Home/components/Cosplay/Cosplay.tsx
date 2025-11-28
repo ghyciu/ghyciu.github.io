@@ -19,6 +19,7 @@ const Cosplay = () => {
       </Description>
       <CosplayCards />
       <SectionLink label="Read more about my cosplays" href="/cosplay" />
+      <hr />
     </div>
   );
 };

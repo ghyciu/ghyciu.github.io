@@ -25,9 +25,8 @@
 
 .home-projects-cards {
   font-family: 'Poppins', monospace;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 280px);
   gap: 1rem;
   width: 100%;
 }
@@ -42,6 +41,14 @@
   text-decoration: none;
   border: #ccc 1px solid;
   overflow: hidden;
+  min-width: 280px;
+  z-index: 1;
+}
+
+@media (max-width: 740px) {
+  .home-projects-cards {
+    justify-content: center;
+  }
 }
 
 .home-projects-card a {

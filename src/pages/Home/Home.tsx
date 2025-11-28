@@ -6,12 +6,14 @@ import Footer from '../../components/Footer/Footer';
 
 const Home: React.FC = () => {
   return (
-    <div>
-      <Banner />
-      <About />
-      <Projects />
-      <Cosplay />
-      <Footer />
+    <div className="home-root">
+      <div className="home-content">
+        <Banner />
+        <About />
+        <Projects />
+        <Cosplay />
+        <Footer />
+      </div>
     </div>
   );
 };

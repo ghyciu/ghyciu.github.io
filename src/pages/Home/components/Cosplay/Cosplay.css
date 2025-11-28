@@ -88,6 +88,7 @@
   position: relative;
   border-radius: 12px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .home-cosplay-card img {

@@ -11,6 +11,8 @@ import Chime2 from '../../../../../assets/images/projects/projects_chime_2.png';
 import Chime3 from '../../../../../assets/images/projects/projects_chime_3.png';
 import Chime4 from '../../../../../assets/images/projects/projects_chime_4.png';
 
+import Echo1 from '../../../../../assets/images/projects/projects_echo_1.png';
+
 const ProjectsCards = () => {
   const projects: ProjectsCardProps[] = [
     {
@@ -26,6 +28,13 @@ const ProjectsCards = () => {
       framework: 'Flutter, Dart, Google Cloud',
       description: 'Marketing and Business App for Philippine MSMEs',
       href: 'https://github.com/ghyciu/Chime'
+    },
+    {
+      images: [Echo1],
+      title: 'Echo',
+      framework: 'Flutter, Dart, Firebase',
+      description: 'Collaborative note-taking and deadline tracking mobile app',
+      href: 'https://github.com/ghyciu/Echo'
     }
   ];
 
