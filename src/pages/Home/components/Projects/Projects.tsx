@@ -2,6 +2,7 @@ import './Projects.css';
 
 import Title from '../../../../components/Title/Title';
 import Description from '../../../../components/Description/Description';
+import ProjectsCards from './components/ProjectsCards';
 import SectionLink from '../../../../components/SectionLink/SectionLink';
 
 const Projects = () => {
@@ -14,6 +15,7 @@ const Projects = () => {
           solutions.
         </p>
       </Description>
+      <ProjectsCards />
       <SectionLink label="Explore my projects" href="/projects" />
     </div>
   );

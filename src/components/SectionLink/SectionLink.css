@@ -2,7 +2,7 @@
   margin-top: 2rem;
   font-family: 'Poppins', monospace;
   font-size: 0.9rem;
-  color: #fff;
+  color: var(--accent-color-2);
   cursor: pointer;
   text-align: right;
   font-weight: 600;
