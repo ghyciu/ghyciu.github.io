@@ -1,20 +1,38 @@
 import ProjectsCard from './ProjectsCard';
+import { ProjectsCardProps } from './ProjectsCard';
 
 import VShooter1 from '../../../../../assets/images/projects/projects_vshooter_1.png';
+import VShooter2 from '../../../../../assets/images/projects/projects_vshooter_2.png';
+import VShooter3 from '../../../../../assets/images/projects/projects_vshooter_3.png';
+import VShooter4 from '../../../../../assets/images/projects/projects_vshooter_4.png';
+
+import Chime1 from '../../../../../assets/images/projects/projects_chime_1.png';
+import Chime2 from '../../../../../assets/images/projects/projects_chime_2.png';
+import Chime3 from '../../../../../assets/images/projects/projects_chime_3.png';
+import Chime4 from '../../../../../assets/images/projects/projects_chime_4.png';
 
 const ProjectsCards = () => {
-  const projects = [
+  const projects: ProjectsCardProps[] = [
     {
-      image: VShooter1,
+      images: [VShooter1, VShooter2, VShooter3, VShooter4],
       title: 'VShooter',
-      framework: 'Unity, C#'
+      framework: 'Unity, C#',
+      description: '3D Top-Down Roguelike Shooter featuring VTubers',
+      href: 'https://github.com/ghyciu/VShooter'
+    },
+    {
+      images: [Chime1, Chime2, Chime3, Chime4],
+      title: 'Chime',
+      framework: 'Flutter, Dart, Google Cloud',
+      description: 'Marketing and Business App for Philippine MSMEs',
+      href: 'https://github.com/ghyciu/Chime'
     }
   ];
 
   return (
     <div className="home-projects-cards">
       {projects.map((project, idx) => (
-        <ProjectsCard key={idx} image={project.image} title={project.title} framework={project.framework} />
+        <ProjectsCard key={idx} images={project.images} title={project.title} framework={project.framework} description={project.description} href={project.href} />
       ))}
     </div>
   );
