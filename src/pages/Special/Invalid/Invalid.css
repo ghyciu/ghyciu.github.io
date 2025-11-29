@@ -1,0 +1,48 @@
+.invalid-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.invalid-message img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 30px;
+}
+
+.invalid-message h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.invalid-message p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #666;
+  margin-top: 20px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.invalid-message-footnote {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #999;
+  margin-top: 40px;
+}
+
+.invalid-message-footnote a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.invalid-message-footnote a:hover {
+  text-decoration: underline;
+}
