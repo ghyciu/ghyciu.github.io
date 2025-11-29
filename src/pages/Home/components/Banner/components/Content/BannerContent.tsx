@@ -40,9 +40,9 @@ const BannerContent: React.FC = () => {
 
   return (
     <div ref={containerRef} className="banner-content">
-      <BannerContentLink label="Software Engineering" href="/blank" />
-      <BannerContentLink label="Graphic Design" href="/blank" />
-      <BannerContentLink label="Cosplay" href="/blank" />
+      <BannerContentLink label="Software Engineering" href="/projects" />
+      <BannerContentLink label="Graphic Design" href="/design" />
+      <BannerContentLink label="Cosplay" href="/cosplay" />
       <BannerContentCards />
       <Socials />
     </div>
