@@ -7,13 +7,11 @@ import Footer from '../../components/Footer/Footer';
 const Home: React.FC = () => {
   return (
     <div className="home-root">
-      <div className="home-content">
-        <Banner />
-        <About />
-        <Projects />
-        <Cosplay />
-        <Footer />
-      </div>
+      <Banner />
+      <About />
+      <Projects />
+      <Cosplay />
+      <Footer />
     </div>
   );
 };

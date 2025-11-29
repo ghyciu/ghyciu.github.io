@@ -4,9 +4,5 @@
   width: 100vw;
   overflow: hidden;
   background: inherit;
-}
-
-.home-content {
-  position: relative;
   z-index: 2;
 }
