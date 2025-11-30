@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
+import Projects from './pages/Projects/Projects';
 import WorkInProgress from './pages/Special/WorkInProgress/WorkInProgress';
 import Invalid from './pages/Special/Invalid/Invalid';
 
@@ -21,10 +22,8 @@ const App: React.FC = () => {
       const viewportHeight = window.innerHeight;
 
       if (isHomePage) {
-        // On home page, show header only after scrolling 100vh
         setIsHeaderVisible(scrollY >= viewportHeight);
       } else {
-        // On other pages, always show header
         setIsHeaderVisible(true);
       }
     };
@@ -45,7 +44,7 @@ const App: React.FC = () => {
       <img src={HalftoneOverlay} alt="halftone overlay" className="halftone-overlay" />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<WorkInProgress />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/design" element={<WorkInProgress />} />
         <Route path="/cosplay" element={<WorkInProgress />} />
         <Route path="/blog" element={<WorkInProgress />} />

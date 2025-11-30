@@ -1,8 +1,37 @@
-.home-root {
-  position: relative;
-  min-height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  background: inherit;
-  z-index: 2;
+.home-filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem auto;
+  padding: 0 10%;
+}
+
+.home-filter-tab {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  border: 3px solid black;
+  background-color: white;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transform: skew(-20deg);
+}
+
+.home-filter-tab span {
+  display: inline-block;
+  transform: skew(20deg);
+}
+
+.home-filter-tab:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.home-filter-tab.active {
+  background-color: var(--accent-color);
+  color: #fff;
 }
