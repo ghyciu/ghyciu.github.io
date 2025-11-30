@@ -22,7 +22,7 @@ const BannerContentCards: React.FC = () => {
     {
       icon: EchoLogo,
       title: 'Echo',
-      subtitle: 'Collaborative note&#8209;taking and deadline&#8209;tracking',
+      subtitle: 'Collaborative note-taking and deadline-tracking',
       framework: 'Flutter/Dart/Firebase',
       href: 'https://github.com/ghyciu/Echo'
     }

@@ -33,7 +33,7 @@
 .footer-left a {
   font-weight: 700;
   font-size: 0.9rem;
-  color: var(--accent-color-2);
+  color: var(--accent-color);
   text-decoration: none;
   cursor: pointer;
 }
@@ -52,7 +52,7 @@
 .footer-right h2 {
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--accent-color-2);
+  color: var(--accent-color);
   margin-bottom: 1rem;
 }
 
@@ -65,5 +65,5 @@
 
 .footer-right a:hover {
   text-decoration: underline;
-  color: var(--accent-color-2);
+  color: var(--accent-color);
 }

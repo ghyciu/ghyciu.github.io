@@ -1,6 +1,8 @@
 import ProjectsCard from './ProjectsCard';
 import { ProjectsCardProps } from './ProjectsCard';
 
+import React, { useEffect, useRef, useState } from 'react';
+
 import VShooter1 from '../../../../../assets/images/projects/projects_vshooter_1.png';
 import VShooter2 from '../../../../../assets/images/projects/projects_vshooter_2.png';
 import VShooter3 from '../../../../../assets/images/projects/projects_vshooter_3.png';
@@ -38,8 +40,30 @@ const ProjectsCards = () => {
     }
   ];
 
+  const [visible, setVisible] = useState(false);
+  const cardsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new window.IntersectionObserver(
+      entries => {
+        const entry = entries[0];
+        if (entry && entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (cardsRef.current) {
+      observer.observe(cardsRef.current);
+    }
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <div className="home-projects-cards">
+    <div ref={cardsRef} className={`home-projects-cards${visible ? ' float-in-up' : ''}`}>
       {projects.map((project, idx) => (
         <ProjectsCard key={idx} images={project.images} title={project.title} framework={project.framework} description={project.description} href={project.href} />
       ))}
