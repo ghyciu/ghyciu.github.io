@@ -1,14 +1,7 @@
 import React, { useState, useRef } from 'react';
+import { ProjectsDataElement } from '../../../../../data/projects';
 
-export interface ProjectsCardProps {
-  images: string[];
-  title: string;
-  framework: string;
-  description: string;
-  href?: string | undefined;
-}
-
-const ProjectsCard = ({ images, title, framework, description, href }: ProjectsCardProps) => {
+const ProjectsCard = ({ images, title, framework, description, href }: ProjectsDataElement) => {
   const [isHovered, setIsHovered] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);

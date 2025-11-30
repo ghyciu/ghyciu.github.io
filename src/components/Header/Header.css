@@ -24,7 +24,7 @@
 .header-container {
   display: flex;
   align-items: center;
-  padding: 0.7rem 2rem;
+  padding: 0.3rem 2rem;
   gap: 4rem;
 }
 
@@ -48,7 +48,7 @@
 
 .header-tabs {
   display: flex;
-  gap: 3rem;
+  gap: 1.3rem;
 }
 
 .header-tabs a {
@@ -58,8 +58,15 @@
   font-size: 0.85rem;
   transition: color 0.2s;
   font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 
 .header-tabs a:hover {
   color: var(--accent-color);
+  background-color: #222233;
+  border-bottom: 3px solid var(--accent-color);
 }
