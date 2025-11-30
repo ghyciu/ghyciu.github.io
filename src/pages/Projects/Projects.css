@@ -2,10 +2,31 @@
   margin-top: 6rem;
   padding-left: 10%;
   padding-right: 10%;
+  display: flex;
+  flex-direction: column;
 }
 
-.projects-root h1 {
-  font-family: 'StretchPro-Regular', sans-serif;
-  font-size: 2.5rem;
-  text-transform: uppercase;
+.projects-projects {
+  margin-bottom: 4rem;
+}
+
+.projects-techstack {
+  margin-bottom: 4rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.projects-techstack img {
+  width: 550px;
+  max-width: 100%;
+}
+
+.projects-services {
+  margin-bottom: 4rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }

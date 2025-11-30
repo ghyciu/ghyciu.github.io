@@ -10,6 +10,7 @@ import './App.css';
 
 import HalftoneOverlay from './assets/images/halftone-overlay.png';
 import { useEffect, useState } from 'react';
+import Footer from './components/Footer/Footer';
 
 const App: React.FC = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
@@ -51,6 +52,7 @@ const App: React.FC = () => {
         <Route path="/contact" element={<WorkInProgress />} />
         <Route path="*" element={<Invalid />} />
       </Routes>
+      <Footer />
     </div>
   );
 };

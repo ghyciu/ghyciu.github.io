@@ -2,7 +2,6 @@ import Banner from './components/Banner/Banner';
 import About from './components/About/About';
 import Projects from './components/Projects/Projects';
 import Cosplay from './components/Cosplay/Cosplay';
-import Footer from '../../components/Footer/Footer';
 import { useState } from 'react';
 
 import './Home.css';
@@ -29,7 +28,6 @@ const Home: React.FC = () => {
       </div>
       {(filter === 'all' || filter === 'projects') && <Projects />}
       {(filter === 'all' || filter === 'cosplay') && <Cosplay />}
-      <Footer />
     </div>
   );
 };
