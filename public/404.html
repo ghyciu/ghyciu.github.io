@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      // GitHub Pages SPA redirect: preserve path and query, send to index.html
+      (function () {
+        var path = window.location.pathname;
+        var search = window.location.search || '';
+        var hash = window.location.hash || '';
+
+        // If this is already the root, no need to redirect
+        // Replace with your repo name if publishing under a project page
+        var repoName = '';
+        // Detect automatic project pages (e.g., /<username>.github.io/<repo>/)
+        // If your site is served under a subpath, set repoName explicitly in package.json homepage
+        try {
+          var homepage = '';
+          // Optional: homepage can be injected at build; fallback to empty
+          // Ensure leading slash if repoName is set
+          if (homepage && homepage !== '/') {
+            var m = homepage.match(/https?:\/\/[^/]+(\/.*)/);
+            if (m && m[1]) repoName = m[1].replace(/\/$/, '');
+          }
+        } catch (e) {}
+
+        var base = repoName || '';
+        var redirectUrl = base + '/index.html?redirect=' + encodeURIComponent(path + search + hash);
+        window.location.replace(redirectUrl);
+      })();
+    </script>
+  </head>
+  <body>
+    Redirecting…
+  </body>
+</html>
