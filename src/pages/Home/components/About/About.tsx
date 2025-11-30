@@ -20,6 +20,7 @@ const About = () => {
           <p>Other than programming, I love playing video games and cosplaying as my favorite characters at local conventions.</p>
         </Description>
       </div>
+      <hr />
     </div>
   );
 };
