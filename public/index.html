@@ -23,6 +23,19 @@
     -->
     <title>Ghyciu</title>
     <script>
+      // Restore original path if redirected from 404.html
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var redirect = params.get('redirect');
+        if (redirect) {
+          // Use history API to clean URL before app mounts
+          var newUrl = redirect;
+          // Remove the query parameter to avoid re-processing
+          window.history.replaceState(null, '', newUrl);
+        }
+      })();
+    </script>
+    <script>
       (function () {
         var lightHref = '%PUBLIC_URL%/logo.png';
         var darkHref = '%PUBLIC_URL%/logo_dark.png';
