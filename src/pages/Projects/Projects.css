@@ -31,13 +31,22 @@
   flex-direction: column;
 }
 
+/* Services Cards */
+
 .projects-services-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   justify-items: center;
-  row-gap: 1rem;
-  column-gap: 2rem;
   max-width: 100%;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.projects-services-cards.float-in-up {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Services Card */
@@ -57,6 +66,11 @@
   flex-direction: row;
   box-sizing: border-box;
   margin: 0 auto;
+}
+
+.projects-services-card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
 }
 
 .projects-services-card i {
