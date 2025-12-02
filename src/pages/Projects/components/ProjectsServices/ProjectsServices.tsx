@@ -1,7 +1,8 @@
-import Title from '../../../components/Title/Title';
-import Description from '../../../components/Description/Description';
+import Title from '../../../../components/Title/Title';
+import Description from '../../../../components/Description/Description';
 import ProjectsServicesCards from './ProjectsServicesCards';
-import Button from '../../../components/Button/Button';
+
+import Button from '../../../../components/Button/Button';
 import { useNavigate } from 'react-router';
 
 const ProjectsServices = () => {
@@ -18,9 +19,7 @@ const ProjectsServices = () => {
         <p>I'm always looking for new opportunities! If you are hiring or interested in collaborating, feel free to reach out.</p>
       </Description>
       <ProjectsServicesCards />
-      <div className="projects-services-button">
-        <Button label="Contact" onClick={handleContactClick} />
-      </div>
+      <Button label="Contact" onClick={handleContactClick} className="projects-services-button" />
       <hr />
     </div>
   );

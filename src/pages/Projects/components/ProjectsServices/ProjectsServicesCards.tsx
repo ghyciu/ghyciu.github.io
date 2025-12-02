@@ -1,4 +1,4 @@
-import { ServicesData, ServicesDataElement } from '../../../data/services';
+import { ServicesData, ServicesDataElement } from '../../../../data/services';
 import ProjectServicesCard from './ProjectsServicesCard';
 import React, { useEffect, useRef, useState } from 'react';
 

@@ -3,10 +3,11 @@ import './Button.css';
 
 interface ButtonProps {
   label: string;
+  className?: string;
   onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ label, className, onClick }) => {
   const [visible, setVisible] = useState(false);
   const buttonRef = useRef<HTMLDivElement>(null);
 
@@ -31,7 +32,7 @@ const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
 
   return (
     <div className="button-container" ref={buttonRef}>
-      <button className={`button ${visible ? 'float-in-up' : ''}`} onClick={onClick}>
+      <button className={`button ${visible ? 'float-in-up' : ''} ${className || ''}`} onClick={onClick}>
         <span className="button-label">{label}</span>
       </button>
     </div>
