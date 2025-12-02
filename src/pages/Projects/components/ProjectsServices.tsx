@@ -1,7 +1,7 @@
 import Title from '../../../components/Title/Title';
 import Description from '../../../components/Description/Description';
 import { ServicesData, ServicesDataElement } from '../../../data/services';
-import ProjectServicesCard from './ProjectServicesCard';
+import ProjectServicesCard from './ProjectsServicesCard';
 
 const ProjectsServices = () => {
   const services: ServicesDataElement[] = ServicesData;
@@ -12,9 +12,11 @@ const ProjectsServices = () => {
       <Description>
         <p>I'm always looking for new opportunities! If you are hiring or interested in collaborating, feel free to reach out.</p>
       </Description>
-      {services.map((service: ServicesDataElement, idx: number) => (
-        <ProjectServicesCard key={idx} title={service.title} />
-      ))}
+      <div className="projects-services-cards">
+        {services.map((service: ServicesDataElement, idx: number) => (
+          <ProjectServicesCard key={idx} title={service.title} frameworks={service.frameworks} icon_classname={service.icon_classname} />
+        ))}
+      </div>
       <hr />
     </div>
   );

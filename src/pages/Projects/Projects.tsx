@@ -1,7 +1,7 @@
 import './Projects.css';
 
 import Title from '../../components/Title/Title';
-import ProjectsServices from './components/ProjectServices';
+import ProjectsServices from './components/ProjectsServices';
 
 const Projects: React.FC = () => {
   return (
