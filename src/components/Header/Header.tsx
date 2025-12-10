@@ -19,11 +19,12 @@ const Header: React.FC<HeaderProps> = ({ isVisible }) => {
   }, []);
 
   const tabs = [
+    { href: '/', label: 'Welcome' },
     { href: '/projects', label: 'Projects' },
     { href: '/design', label: 'Design' },
     { href: '/cosplay', label: 'Cosplay' },
     { href: '/blog', label: 'Blog' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/contact', label: 'Contact' }
   ];
 
   return (
@@ -37,27 +38,28 @@ const Header: React.FC<HeaderProps> = ({ isVisible }) => {
         </div>
         {!isMobile && (
           <div className="header-tabs">
-            {tabs.map((t) => (
-              <a key={t.href} href={t.href}>{t.label}</a>
+            {tabs.map(t => (
+              <a key={t.href} href={t.href}>
+                {t.label}
+              </a>
             ))}
           </div>
         )}
         {isMobile && (
           <div className="header-dropdown">
-            <button className="header-dropdown-button" onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-haspopup="menu">
-              Menu
+            <button type="button" className="header-dropdown-button" onClick={() => setOpen(v => !v)} aria-expanded={open} aria-haspopup="menu" aria-controls="header-dropdown-menu">
+              <span className="burger-icon" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
               <span className={`chevron ${open ? 'up' : 'down'}`}>▾</span>
+              <span className="sr-only">Menu</span>
             </button>
             {open && (
-              <div className="header-dropdown-menu" role="menu">
-                {tabs.map((t) => (
-                  <a
-                    key={t.href}
-                    href={t.href}
-                    className="header-dropdown-item"
-                    role="menuitem"
-                    onClick={() => setOpen(false)}
-                  >
+              <div id="header-dropdown-menu" className="header-dropdown-menu" role="menu">
+                {tabs.map(t => (
+                  <a key={t.href} href={t.href} className="header-dropdown-item" role="menuitem" onClick={() => setOpen(false)}>
                     {t.label}
                   </a>
                 ))}
