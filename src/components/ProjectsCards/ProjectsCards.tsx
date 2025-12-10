@@ -1,11 +1,20 @@
 import ProjectsCard from './ProjectsCard';
-import ProjectsData from '../../../../../data/projects';
-import { ProjectsDataElement } from '../../../../../data/projects';
+import ProjectsData from '../../data/projects';
+import { ProjectsDataElement } from '../../data/projects';
+import './ProjectsCards.css';
 
 import React, { useEffect, useRef, useState } from 'react';
 
-const ProjectsCards = () => {
-  const projects: ProjectsDataElement[] = ProjectsData;
+interface ProjectsCardsProps {
+  limit?: number;
+}
+
+const ProjectsCards = ({ limit }: ProjectsCardsProps) => {
+  let projects: ProjectsDataElement[] = ProjectsData;
+  if (typeof limit === 'number') {
+    projects = projects.slice(0, limit);
+  }
+
   const [visible, setVisible] = useState(false);
   const cardsRef = useRef<HTMLDivElement>(null);
 
@@ -29,7 +38,7 @@ const ProjectsCards = () => {
   }, []);
 
   return (
-    <div ref={cardsRef} className={`home-projects-cards${visible ? ' float-in-up' : ''}`}>
+    <div ref={cardsRef} className={`projects-cards${visible ? ' float-in-up' : ''}`}>
       {projects.map((project, idx) => (
         <ProjectsCard key={idx} images={project.images} title={project.title} framework={project.framework} description={project.description} href={project.href} />
       ))}

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { ProjectsDataElement } from '../../../../../data/projects';
+import { ProjectsDataElement } from '../../data/projects';
 
 const ProjectsCard = ({ images, title, framework, description, href }: ProjectsDataElement) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -34,13 +34,13 @@ const ProjectsCard = ({ images, title, framework, description, href }: ProjectsD
   const displayedImage = isHovered && images.length > 1 ? images[currentIndex] : images[0];
 
   return (
-    <div className="home-projects-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div className="projects-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <a href={href} target="_blank" rel="noopener noreferrer">
         <img src={displayedImage} alt={title} />
-        <div className="home-projects-card-metadata">
-          <div className="home-projects-card-framework">{framework}</div>
-          <div className="home-projects-card-title">{title}</div>
-          <div className="home-projects-card-description">{description}</div>
+        <div className="projects-card-metadata">
+          <div className="projects-card-framework">{framework}</div>
+          <div className="projects-card-title">{title}</div>
+          <div className="projects-card-description">{description}</div>
         </div>
       </a>
     </div>

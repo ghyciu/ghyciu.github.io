@@ -2,7 +2,7 @@ import './Projects.css';
 
 import Title from '../../../../components/Title/Title';
 import Description from '../../../../components/Description/Description';
-import ProjectsCards from './components/ProjectsCards';
+import ProjectsCards from '../../../../components/ProjectsCards/ProjectsCards';
 import SectionLink from '../../../../components/SectionLink/SectionLink';
 
 const Projects = () => {
@@ -15,7 +15,7 @@ const Projects = () => {
           solutions. Oh, and I guess this website also counts too.
         </p>
       </Description>
-      <ProjectsCards />
+      <ProjectsCards limit={5} />
       <SectionLink label="Explore my projects" href="/projects" />
       <hr />
     </div>
