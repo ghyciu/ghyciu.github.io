@@ -1,11 +1,9 @@
-import ProjectsCard from './ProjectsCard';
-import ProjectsData from '../../../../../data/projects';
-import { ProjectsDataElement } from '../../../../../data/projects';
-
+import { ServicesData, ServicesDataElement } from '../../../../data/services';
+import ProjectServicesCard from './ProjectsServicesCard';
 import React, { useEffect, useRef, useState } from 'react';
 
-const ProjectsCards = () => {
-  const projects: ProjectsDataElement[] = ProjectsData;
+const ProjectsServicesCards = () => {
+  const services: ServicesDataElement[] = ServicesData;
   const [visible, setVisible] = useState(false);
   const cardsRef = useRef<HTMLDivElement>(null);
 
@@ -29,12 +27,12 @@ const ProjectsCards = () => {
   }, []);
 
   return (
-    <div ref={cardsRef} className={`home-projects-cards${visible ? ' float-in-up' : ''}`}>
-      {projects.map((project, idx) => (
-        <ProjectsCard key={idx} images={project.images} title={project.title} framework={project.framework} description={project.description} href={project.href} />
+    <div className={`projects-services-cards ${visible ? ' float-in-up' : ''}`} ref={cardsRef}>
+      {services.map((service: ServicesDataElement, idx: number) => (
+        <ProjectServicesCard key={idx} title={service.title} frameworks={service.frameworks} icon_classname={service.icon_classname} />
       ))}
     </div>
   );
 };
 
-export default ProjectsCards;
+export default ProjectsServicesCards;

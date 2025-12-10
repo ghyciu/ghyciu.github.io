@@ -1,0 +1,30 @@
+.button {
+  background-color: white;
+  border: 3px solid #000;
+  font-family: 'StretchPro-Regular', sans-serif;
+  color: black;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 4px 6px 0 0 #222;
+  transform: skew(-20deg) translateY(40px);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+.button.float-in-up {
+  opacity: 1;
+  transform: skew(-20deg) translateY(0);
+  transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.button:hover {
+  background-color: var(--accent-color);
+  color: white;
+  box-shadow: 4px 2px 0 0 #222;
+}
+
+.button-label {
+  display: inline-block;
+  transform: skew(20deg);
+}

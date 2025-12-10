@@ -15,16 +15,18 @@ const Home: React.FC = () => {
     <div className="home-root">
       <Banner />
       <About />
-      <div className="home-filter-tabs">
-        <button className={`home-filter-tab ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>
-          <span>All</span>
-        </button>
-        <button className={`home-filter-tab ${filter === 'projects' ? 'active' : ''}`} onClick={() => setFilter('projects')}>
-          <span>Projects</span>
-        </button>
-        <button className={`home-filter-tab ${filter === 'cosplay' ? 'active' : ''}`} onClick={() => setFilter('cosplay')}>
-          <span>Cosplay</span>
-        </button>
+      <div className="home-filter-tabs-container">
+        <div className="home-filter-tabs">
+          <button className={`home-filter-tab ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>
+            <span>All</span>
+          </button>
+          <button className={`home-filter-tab ${filter === 'projects' ? 'active' : ''}`} onClick={() => setFilter('projects')}>
+            <span>Projects</span>
+          </button>
+          <button className={`home-filter-tab ${filter === 'cosplay' ? 'active' : ''}`} onClick={() => setFilter('cosplay')}>
+            <span>Cosplay</span>
+          </button>
+        </div>
       </div>
       {(filter === 'all' || filter === 'projects') && <Projects />}
       {(filter === 'all' || filter === 'cosplay') && <Cosplay />}

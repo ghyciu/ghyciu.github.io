@@ -7,8 +7,16 @@ const BannerBackground: React.FC = () => {
   const animRef = useRef({ tx: 0, ty: 0, targetX: 0, targetY: 0, rafId: 0 });
 
   useEffect(() => {
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
     const maxX = 30;
     const maxY = 20;
+
+    if (isMobile) {
+      if (imgRef.current) {
+        imgRef.current.style.transform = '';
+      }
+      return;
+    }
 
     const handleMouseMove = (e: MouseEvent) => {
       const w = window.innerWidth || 1;

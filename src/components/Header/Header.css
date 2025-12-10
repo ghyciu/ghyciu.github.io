@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background: linear-gradient(135deg, #08080a 0%, #171723 60%, #1a1a29 100%);
+  background: #08080a;
   z-index: 1000;
   transform: translateY(0);
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -47,6 +47,8 @@
   height: 35px;
 }
 
+/* Header Tabs (PC) */
+
 .header-tabs {
   display: flex;
   gap: 1.3rem;
@@ -70,4 +72,113 @@
   color: var(--accent-color);
   background-color: #222233;
   border-bottom: 3px solid var(--accent-color);
+}
+
+/* Header Dropdown (Mobile) */
+
+.header-dropdown {
+  margin-left: auto;
+  position: relative;
+}
+
+.header-dropdown-button {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: #08080a;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-left: none;
+  border-right: none;
+  padding: 0.5rem 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.header-dropdown-button:hover {
+  background-color: #222233;
+  color: var(--accent-color);
+  border-bottom: 3px solid var(--accent-color);
+}
+
+.header-dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.4rem);
+  background: #08080a;
+  border-radius: 8px;
+  min-width: 180px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  padding: 0.4rem;
+  z-index: 1001;
+}
+
+.header-dropdown-item {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.header-dropdown-item:hover {
+  background: #26263a;
+  color: var(--accent-color);
+}
+
+.chevron {
+  font-size: 0.9rem;
+}
+
+/* Generic burger icon used in header */
+.burger-icon {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.burger-icon span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: white;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Responsive UI */
+
+@media (max-width: 800px) {
+  .header-container {
+    gap: 1rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .header-tabs {
+    display: none;
+  }
+
+  .header-dropdown {
+    display: block;
+  }
+}
+
+@media (min-width: 801px) {
+  .header-dropdown {
+    display: none;
+  }
 }
