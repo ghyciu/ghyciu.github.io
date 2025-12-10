@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.0847e409.css",
-    "main.js": "/static/js/main.aad73517.js",
+    "main.css": "/static/css/main.d0a34f4e.css",
+    "main.js": "/static/js/main.3d5fff81.js",
+    "static/media/diwata-portfolio.png": "/static/media/diwata-portfolio.2fcb17f35739e103bdc7.png",
     "static/media/banner_bg.jpg": "/static/media/banner_bg.81badd50b5427f5a580f.jpg",
     "static/media/projects_vshooter_3.png": "/static/media/projects_vshooter_3.8e9d57fde6183369cf12.png",
     "static/media/banner_cosplay.png": "/static/media/banner_cosplay.82f6cf0a4faa0e444628.png",
@@ -27,11 +28,11 @@
     "static/media/UAV-OSD-Mono.ttf": "/static/media/UAV-OSD-Mono.86d532bf5ef927b385cf.ttf",
     "static/media/sns_mail.png": "/static/media/sns_mail.3746f1b1b3a0f66efbd6.png",
     "index.html": "/index.html",
-    "main.0847e409.css.map": "/static/css/main.0847e409.css.map",
-    "main.aad73517.js.map": "/static/js/main.aad73517.js.map"
+    "main.d0a34f4e.css.map": "/static/css/main.d0a34f4e.css.map",
+    "main.3d5fff81.js.map": "/static/js/main.3d5fff81.js.map"
   },
   "entrypoints": [
-    "static/css/main.0847e409.css",
-    "static/js/main.aad73517.js"
+    "static/css/main.d0a34f4e.css",
+    "static/js/main.3d5fff81.js"
   ]
 }
