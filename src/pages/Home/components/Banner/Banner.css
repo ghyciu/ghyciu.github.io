@@ -29,6 +29,8 @@
   color: white;
 }
 
+/* Banner Cosplay */
+
 .banner-cosplay {
   position: absolute;
   left: 75%;
@@ -37,6 +39,7 @@
   display: block;
   z-index: 6;
   pointer-events: none;
+  will-change: transform;
 }
 
 .banner-cosplay-img {
@@ -46,8 +49,10 @@
   height: auto;
 }
 
-.banner-cosplay {
-  will-change: transform;
+@media (max-width: 700px) {
+  .banner-cosplay {
+    opacity: 0;
+  }
 }
 
 /* Banner Content */
@@ -61,6 +66,15 @@
   color: white;
   pointer-events: auto;
   width: 600px;
+  container-type: inline-size;
+}
+
+@media (max-width: 700px) {
+  .banner-content {
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 /* Banner Content - Links */
@@ -70,6 +84,8 @@ a.banner-content-link {
   text-decoration: none;
   display: block;
   transition: color 280ms ease;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 a.banner-content-link:visited {
@@ -86,7 +102,7 @@ a.banner-content-link:visited {
 .banner-content-link-inner h2 {
   color: inherit;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 6cqw, 1.5rem);
   font-family: 'UAV-OSD-Mono-Regular', serif;
   margin: 0;
   transition: color 280ms ease;
@@ -200,14 +216,26 @@ a.banner-content-link:visited {
 .banner-title {
   position: absolute;
   left: 12%;
-  top: 45%;
+  top: 40%;
   transform: translateX(-50%);
   z-index: 4;
   color: white;
-  font-size: 4.5rem;
   letter-spacing: 0.3rem;
   font-family: 'StretchPro-Regular', sans-serif;
   pointer-events: none;
+}
+
+.banner-title h1 {
+  font-size: clamp(3rem, 10cqw, 6rem);
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .banner-title {
+    left: 5%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
 }
 
 /* Banner Header */
