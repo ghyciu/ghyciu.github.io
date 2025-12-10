@@ -11,6 +11,7 @@ import './App.css';
 import HalftoneOverlay from './assets/images/halftone-overlay.png';
 import { useEffect, useState } from 'react';
 import Footer from './components/Footer/Footer';
+import Design from './pages/Design/Design';
 
 const App: React.FC = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
@@ -46,7 +47,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/design" element={<WorkInProgress />} />
+        <Route path="/design" element={<Design />} />
         <Route path="/cosplay" element={<WorkInProgress />} />
         <Route path="/blog" element={<WorkInProgress />} />
         <Route path="/contact" element={<WorkInProgress />} />
