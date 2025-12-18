@@ -5,6 +5,7 @@ import Description from '../../components/Description/Description';
 import Button from '../../components/Button/Button';
 
 const Contact: React.FC = () => {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [title, setTitle] = useState('');
   const [message, setMessage] = useState('');
@@ -32,7 +33,7 @@ const Contact: React.FC = () => {
     const to = 'contact@ghyciu.com';
     const subjectPrefix = '[Ghyciu Website]';
     const subject = encodeURIComponent(`${subjectPrefix} ${title}`.trim());
-    const body = encodeURIComponent(`Message:\n${message}\n\nFrom: ${email}`);
+    const body = encodeURIComponent(`Message:\n${message}\n\nName: ${name || '(not provided)'}\nEmail: ${email}`);
     const mailtoUrl = `mailto:${to}?subject=${subject}&body=${body}`;
 
     window.location.href = mailtoUrl;
@@ -48,16 +49,25 @@ const Contact: React.FC = () => {
       </div>
 
       <form className="contact-form" onSubmit={handleSubmit} noValidate>
-        <div className="contact-form-field">
-          <label htmlFor="contact-email" className="contact-form-label">
-            Your Email
-          </label>
-          <input id="contact-email" type="email" className="contact-form-input" value={email} onChange={e => setEmail(e.target.value)} placeholder="you@example.com" required />
-          {errors.email ? (
-            <div className="contact-form-error" role="alert">
-              {errors.email}
-            </div>
-          ) : null}
+        <div className="contact-form-row">
+          <div className="contact-form-field">
+            <label htmlFor="contact-name" className="contact-form-label">
+              Prefer red Name
+            </label>
+            <input id="contact-name" type="text" className="contact-form-input" value={name} onChange={e => setName(e.target.value)} placeholder="Jane Doe" />
+          </div>
+
+          <div className="contact-form-field">
+            <label htmlFor="contact-email" className="contact-form-label">
+              Your Email
+            </label>
+            <input id="contact-email" type="email" className="contact-form-input" value={email} onChange={e => setEmail(e.target.value)} placeholder="you@example.com" required />
+            {errors.email ? (
+              <div className="contact-form-error" role="alert">
+                {errors.email}
+              </div>
+            ) : null}
+          </div>
         </div>
 
         <div className="contact-form-field">
