@@ -6,6 +6,7 @@ import Button from '../../components/Button/Button';
 
 const Contact: React.FC = () => {
   const [email, setEmail] = useState('');
+  const [title, setTitle] = useState('');
   const [message, setMessage] = useState('');
   const [errors, setErrors] = useState<{ email?: string; message?: string }>({});
 
@@ -29,7 +30,8 @@ const Contact: React.FC = () => {
     if (!validate()) return;
 
     const to = 'contact@ghyciu.com';
-    const subject = encodeURIComponent('Website Contact');
+    const subjectPrefix = '[Ghyciu Website]';
+    const subject = encodeURIComponent(`${subjectPrefix} ${title}`.trim());
     const body = encodeURIComponent(`Message:\n${message}\n\nFrom: ${email}`);
     const mailtoUrl = `mailto:${to}?subject=${subject}&body=${body}`;
 
@@ -56,6 +58,13 @@ const Contact: React.FC = () => {
               {errors.email}
             </div>
           ) : null}
+        </div>
+
+        <div className="contact-form-field">
+          <label htmlFor="contact-title" className="contact-form-label">
+            Title
+          </label>
+          <input id="contact-title" type="text" className="contact-form-input" value={title} onChange={e => setTitle(e.target.value)} placeholder="Subject of your message" />
         </div>
 
         <div className="contact-form-field">
