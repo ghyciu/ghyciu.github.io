@@ -103,6 +103,7 @@ const Design: React.FC = () => {
           <div className={`design-caption ${hideCaption ? 'design-caption-hidden' : ''}`} role="group" aria-label="Design details">
             <h2 className="design-caption-title">{currentItem.title}</h2>
             {currentItem.description && <p className="design-caption-description">{currentItem.description}</p>}
+            {currentItem.footnote && <h4 className="design-caption-footnote">{currentItem.footnote}</h4>}
           </div>
         )}
       </div>

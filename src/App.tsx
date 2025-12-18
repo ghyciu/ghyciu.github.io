@@ -3,6 +3,8 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
 import Projects from './pages/Projects/Projects';
+import Contact from './pages/Contact/Contact';
+
 import WorkInProgress from './pages/Special/WorkInProgress/WorkInProgress';
 import Invalid from './pages/Special/Invalid/Invalid';
 
@@ -50,7 +52,7 @@ const App: React.FC = () => {
         <Route path="/design" element={<Design />} />
         <Route path="/cosplay" element={<WorkInProgress />} />
         <Route path="/blog" element={<WorkInProgress />} />
-        <Route path="/contact" element={<WorkInProgress />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Invalid />} />
       </Routes>
       <Footer />

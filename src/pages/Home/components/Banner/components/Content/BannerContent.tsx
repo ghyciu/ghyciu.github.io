@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import BannerContentLink from './BannerContentLink';
 import BannerContentCards from './BannerContentCards';
 import Socials from '../../../../../../components/Socials/Socials';
+import BannerTitle from '../BannerTitle';
 
 const BannerContent: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -40,6 +41,7 @@ const BannerContent: React.FC = () => {
 
   return (
     <div ref={containerRef} className="banner-content">
+      <BannerTitle />
       <BannerContentLink label="Software Engineering" href="/projects" />
       <BannerContentLink label="Graphic Design" href="/design" />
       <BannerContentLink label="Cosplay" href="/cosplay" />
